@@ -1,0 +1,80 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(0, 110, 182);
+    padding: 0.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    margin: 0 auto 2rem;    
+    max-width: 90vw;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Evenly spaces items */
+    align-items: center;
+    padding: 1rem;
+}
+
+.navigation li {
+    flex: 1 1 auto; /* Ensures equal spacing */
+}
+
+.navigation a {
+    display: block;
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}
+
+/* Main Section */
+main {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #eee;
+    text-align: center;
+    border: 1px solid rgb(0 0 0 / .2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+}
