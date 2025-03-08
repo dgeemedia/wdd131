@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals."/>
+  <meta name="author" content="Lucky George Olumah"/>
+  <title>WDD 131 : Dynamic Web Fundamentals - Lucky George Olumah</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131</h1>
+  <header>
+    <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Lucky George Olumah</span></h1>
+    <nav>
+      <a href="https://www.linkedin.com/in/lucky-george-olumah-58621870/" target="_blank">linkedin</a>
+      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+      <a href="#" target="_blank">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- First Card -->
+    <section class="card">
+      <!-- About Me Heading -->
+      <h2 class="heading about-heading">About Me</h2>
+      <div class="profile">
+        <p>
+          My name is Lucky George Olumah. I currently live in Lagos, Nigeria with my lovely wife
+          and two wonderful kids (Michelle and Raphael). I currently work as a customer service
+          officer in one of Nigeria's financial institution.
+        </p>
+        <img src="images/profile.jpg" alt="Profile Picture" />
+      </div>
+
+      <!-- Location Heading -->
+      <h2 class="heading location-heading">Lagos, Nigeria</h2>
+      <div class="location">
+        <img src="images/flag.png" alt="Country Flag" />
+        <p>
+          Nigeria is a West African country that is the most populated country in Africa. 
+          It is a federal republic with a mixed economy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Second Card -->
+    <section class="card">
+      <h2 class="heading resources-heading">Web Dev Resources</h2>
+      <div class="resources">
+        <ul>
+          <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+          <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+          <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+          <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+          <li><a href="https://placeholder.com/" target="_blank">Image Placeholder</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>©<span id="currentyear"></span> 🌸 Lucky George Olumah 🌸 Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

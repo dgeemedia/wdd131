@@ -1,0 +1,152 @@
+/* RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: #002d5b;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+  }
+  
+  header .highlight {
+    color: yellow;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* MAIN LAYOUT */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left: About & Location, Right: Resources */
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* CARD BASE */
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* HEADINGS WITH BACKGROUND OR UNDERLINE */
+  .heading {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
+  /* 1) ABOUT HEADING: BACKGROUND COLOR */
+  .about-heading {
+    background-color: darkcyan;
+    border-radius: 5px;
+  }
+  
+  /* 2) LOCATION HEADING: UNDERLINE ACROSS FULL WIDTH */
+  .location-heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: transparent;
+  }
+  
+  /* 3) RESOURCES HEADING: BACKGROUND COLOR */
+  .resources-heading {
+    background-color: darkcyan;
+    border-radius: 5px;
+  }
+  
+  /* PROFILE & LOCATION SECTIONS */
+  .profile, .location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .profile img {
+    width: 120px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: none; 
+  }
+  
+  .location img {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 0; 
+  }
+  
+  /* RESOURCES LIST */
+  .resources {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .resources ul {
+    list-style-type: disc;
+    text-decoration: underline;
+    padding-left: 1.5rem;
+  }
+  
+  .resources ul li {
+    margin-bottom: 5px;
+  }
+  
+  .resources ul li a {
+    text-decoration: none;
+    color: #002d5b;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #002d5b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  

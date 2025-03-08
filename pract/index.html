@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="styles/pract.css">
+    <script src="scripts/pract.js" defer></script>
+</head>
+<body>
+    <h1>JavaScript Variables and Data Types</h1>
+<p>First look at the questions 1️⃣-6️⃣ in the JS editor panel. Ponder the questions about the expressions before looking at the answers and explanations provided.</p>
+
+<hr>
+<p id="output"></p>
+<hr>
+
+<details>
+  <summary>Answer: #1</summary>
+  <p class="green">❔Why is the result variable value assigned '12' versus 3?</p>
+  <p>JavaScript performs implicit type coercion when you use the + operator with different types of values.
+In this case, you have a numeric value 1 and a string value '2'. When you try to concatenate a string with a number using the + operator, JavaScript converts the number to a string and performs <strong>string concatenation</strong> and not mathmatical addition.</p>
+</details>
+<details>
+  <summary>Answer: #2</summary>
+  <p class="green">❔What are some other built in functions or methods that can change a string (sequence of characters) to a number?</p>
+  <p>The <strong>parseInt()</strong> function parses a string and returns an integer.</p>
+  <p>The <strong>parseFloat()</strong> function parses a string and returns a floating-point number.</p>
+  <p><strong>Unary plus operator</strong> (+), e.g., <code>result = one; result += +two; </code>. Using the unary plus operator converts a string to a number.</p>
+  <p><strong>Number()</strong> constructur can be used to create a new Number object, or when called as a function, it converts a string to a number data type.</p>
+</details>
+<details>
+  <summary>Answer: #3</summary>
+  <p class="green">❔Was the result what you expected?</p>
+  <p>In this case, the implicit type coercion with the '*' multiplication operator, the conversion is from a string to a number. So the variable two with the value of '2' is converted to a number.</p>
+</details>
+<details>
+  <summary>Answer: #4</summary>
+  <p class="green">❔What is the meaning and definition of the acronym NaN?</p>
+  <p>"Not a Number". It is a special value that represents the result of an invalid or undefined mathematical operation. If any operand in an arithmetic expression is NaN, the result of the entire expression will be NaN. NaN is not equal to any value, including NaN.</p>
+</details>
+<details>
+  <summary>Answer: #5</summary>
+  <p class="green">❔Did we get the value we expected? Why didn't it work?</p>
+  <p>In order to view #5 and #6, you will need to fix the error. "Assignment to a constant variable" means that a variable declared as a constant was attempted to be used as the result of an expression (reassigned a value). You cannot do this with const which makes them very useful. Solution is to change from const to let on the variables declaration: <code>let two = '2';</code> on line#3 of the JavaScript.</p>
+</details>
+<details>
+  <summary>Answer: #6</summary>
+  <p class="green">❔Change the array declaration by adding in the number 4 and place it in its correct acscending order position.</p>
+  <p>const myArray = [1,2,3,4,5];</p>
+</details>
+</body>
+</html>

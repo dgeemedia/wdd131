@@ -1,0 +1,12 @@
+body {margin: 1rem;}
+h1 {border-bottom: 1px solid #bbb;}
+p {margin:0;font-family: courier;}
+details {
+  margin: 1rem 2rem;
+  border: 1px solid rgba(0,0,0,.1);
+  padding: 0.5rem;
+  color: #000;
+  background-color:rgba(238, 254, 238, 1); ;
+}
+details p {margin: 0.5rem 0 0 0.5rem;}
+.green {color: #008000;}
