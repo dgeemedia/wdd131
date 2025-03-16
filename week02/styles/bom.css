@@ -36,6 +36,17 @@ button {
 
 .delete {
 	width: fit-content;
+    margin-left: 10px;
+    background-color: lightgray;
+    color: red;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete:hover {
+    background-color: darkred;
 }
 
 .input {
