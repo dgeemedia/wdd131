@@ -26,7 +26,7 @@ header {
     top: 1rem;
 }
 
-#nav-menu.open {
+nav.open {
     display: flex;
 }
 

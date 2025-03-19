@@ -10,9 +10,5 @@ menuButton.addEventListener("click", () => {
     navMenu.classList.toggle("open");
 
     // Change button text between ☰ and ❌
-    if (navMenu.classList.contains("open")) {
-        menuButton.textContent = "❌"; // Change to close button
-    } else {
-        menuButton.textContent = "☰"; // Change back to menu button
-    }
+    menuButton.textContent = navMenu.classList.contains("open") ? "❌" : "☰";
 });
