@@ -56,18 +56,25 @@
     margin: 1rem auto;
   }
   
-  /* Position the data box to the left */
-  /*.data-box {
-    top: 20%;
-    left: 5%;
+  .data-box h2, 
+  .weather-box h2 {
+    background-color: #008753; /* Nigeria's green */
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 8px 8px 0 0; /* Rounded top corners only */
   }
-  
-  /* Position the weather box to the right */
-  /*.weather-box {
-    top: 20%;
-    right: 5%;
-  }
-  
+
+  /* Style for Data and Weather headings */
+.data-heading, 
+.weather-heading {
+    background-color: #008753;/* Green background */
+    color: white; /* White text */
+    font-weight: bold;
+    padding: 10px 15px; /* Adjust spacing */
+    display: inline-block; /* Fit content width */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
   /* WEATHER ICON for MOBILE */
   .weather-icon-mobile {
     display: block;
@@ -130,6 +137,21 @@
     }
     .weather-box {
       bottom: 15%;
+    }
+    .data-box h2, 
+    .weather-box h2 {
+        background-color: transparent !important; /* No background */
+        color: black !important; /* Default text color */
+        padding: 0 !important; /* Remove padding */
+        border-radius: 0 !important; /* Remove rounded corners */
+        text-align: left !important; /* Align text properly */
+  }
+    .data-heading, 
+    .weather-heading {
+        background-color: transparent; /* No background */
+        color: black; /* Default text color */
+        padding: 0; /* Remove padding */
+        display: block; /* Full width */
     }
   }
   
