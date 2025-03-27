@@ -1,0 +1,135 @@
+/* GLOBAL CSS VARIABLES (Nigeria color theme) */
+:root {
+    --primary-color: #008753; /* Nigerian green */
+    --secondary-color: #fefefe; /* White accent */
+    --bg-color: #f0f0f0;
+  }
+  
+  /* BASIC STYLES */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: #333;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* SUPERIMPOSED BOXES ON HERO */
+  .data-box,
+  .weather-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: static;
+    margin: 1rem auto;
+  }
+  
+  /* Position the data box to the left */
+  /*.data-box {
+    top: 20%;
+    left: 5%;
+  }
+  
+  /* Position the weather box to the right */
+  /*.weather-box {
+    top: 20%;
+    right: 5%;
+  }
+  
+  /* WEATHER ICON for MOBILE */
+  .weather-icon-mobile {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* PSEUDO-ELEMENT FOR WEATHER HEADING ON LARGE SCREENS */
+  .weather-box h2::after {
+    content: "⛅"; /* or "☀" "☁" etc. */
+    margin-left: 0.5rem;
+    display: none;
+  }
+  
+  /* MEDIA QUERY: LARGE SCREENS (≥ 1000px) */
+  @media (min-width: 1000px) {
+    /* Hide mobile icon, show pseudo-element icon */
+    .data-box,
+    .weather-box {
+        position: absolute;
+        margin: 0;
+    }
+    
+    .data-box {
+        top: 20%;
+        left: 5%;
+    }
+
+    .weather-box {
+        top: 20%;
+        right: 5%;
+    }
+    
+    .weather-icon-mobile {
+      display: none;
+    }
+    .weather-box h2::after {
+      display: inline;
+    }
+  }
+  
+  /* MOBILE RESPONSIVE ADJUSTMENTS (OPTIONAL) */
+  @media (max-width: 768px) {
+    .data-box,
+    .weather-box {
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 1rem;
+      top: auto; /* or top: 30%; etc. */
+      bottom: 5%;
+    }
+    .weather-box {
+      bottom: 15%;
+    }
+  }
+  

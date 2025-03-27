@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-Images</title>
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <main>
+    <h1>object-fit</h1>
+    <div class="intro">
+    <ul>
+        <li>Containers: 200 x 200 | 1:1</li>
+        <li>Images orginal size: 700 x 300 | 7:3</li>
+        <li>All images are set in CSS to use <br><code> width: 100%; height: 100%;</code><br> in this example.</li>
+    </ul>
+    </div>
+    
+    <div class="grid">
+        <div><strong>CSS</strong>:<br> <code>No object-fit declaration</code>
+            <span id="nofit"></span>
+        </div>
+        <figure>
+            <img src="https://picsum.photos/id/133/700/300/" alt="Placeholder" class="nofit" loading="lazy" width="700" height="300">
+        </figure>
+        <p>Trying to force the whole image to fit <em>distorts</em> the image.</p>
+        <hr>
+        <div><strong>CSS</strong>:<br> <code>object-fit: cover</code><span id="cover"></span></div>
+        <figure>
+            <img src="https://picsum.photos/id/133/700/300/" alt="Placeholder" class="cover" loading="lazy" width="700" height="300">
+        </figure>
+        <p>This is like making sure the photo completely covers the frame. It'll zoom in and may cut off parts of the photo to ensure no empty space is showing. The aspect ratio is still maintained. This cropping can sometimes lead to awkward compositions or cut-off important details.</p>
+        <hr>
+        <div><strong>CSS</strong>:<br><code>object-fit: contain</code><span id="contain"></span></div>
+        <figure>
+            <img src="https://picsum.photos/id/133/700/300/" alt="Placeholder" class="contain" loading="lazy" width="700" height="300">
+        </figure>
+        <p>Think of this like making sure the entire photo fits inside the frame without being cut off. It maintains the photo's aspect ratio, but you might get some empty space around it (like letterboxing on a widescreen movie).</p>
+    </div>
+    </main> 
+</body>
+</html>

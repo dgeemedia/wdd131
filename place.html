@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nigeria Information" />
+  <meta name="author" content="Lucky George Olumah" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+  <title>Nigeria | Lucky George Olumah</title>
+</head>
+<body>
+  <header>
+    <h1>Nigeria</h1>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <div class="hero">
+      <picture>
+        <!-- Large image for screens ≥ 1000px -->
+        <source srcset="images/hero-small.webp" media="(min-width: 1000px)" />
+
+        <!-- Medium image for screens ≥ 500px -->
+        <source srcset="images/nigerialandscapesmall.webp" media="(min-width: 500px)" />
+
+        <!-- Default fallback (small) -->
+        <img
+          src="images/nigerialandscapesmall.webp"
+          alt="Nigerian Landscape"
+          width="1500"
+          height="750"
+        />
+      </picture>
+
+      <!-- Data (superimposed) -->
+      <article class="data-box">
+        <h2>Data</h2>
+        <p><strong>Area:</strong> 923,769 km²</p>
+        <p><strong>Population:</strong> 225,082,083 (est.)</p>
+        <p><strong>Capital:</strong> Abuja</p>
+        <p><strong>Languages:</strong> English, Hausa, Igbo, Yoruba, others</p>
+        <p><strong>Currency:</strong> Nigerian Naira (NGN)</p>
+        <p><strong>Time Zone:</strong> UTC+1</p>
+        <p><strong>Calling Code:</strong> +234</p>
+        <p><strong>Internet TLD:</strong> .ng</p>
+      </article>
+
+      <!-- Weather (superimposed) -->
+      <article class="weather-box">
+        <h2>Weather</h2>
+        <div class="weather-icon-mobile">
+          <!-- Example of an inline SVG icon for mobile -->
+          <img src="images/cloudy.svg" alt="Cloudy Icon" width="50" height="50" />
+        </div>
+        <p><strong>Temperature:</strong> <span id="tempValue">25</span>°C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> <span id="windSpeedValue">10</span> km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="windChillValue"></span></p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>©<span id="currentyear"></span> 🌸 Lucky George Olumah 🌸 Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
