@@ -1,0 +1,88 @@
+main {
+    margin: 1rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Acme", Arial, sans-serif;
+  }
+  
+  p {
+    margin: 1rem;
+  }
+  
+  strong {
+    font-family: "Consolas", monospace;
+  }
+  
+  code,
+  .output {
+    font-family: "Consolas", monospace;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 0.5rem;
+    display: inline-block;
+  }
+  
+  code {
+    background-color: #ddd;
+  }
+  
+  output {
+    background-color: #bed;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 1rem;
+    background-color: #ace;
+  }
+  
+  th,
+  td {
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .given {
+    background-color: #ffc;
+  }
+  
+  .solution {
+    background-color: #bed;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: start;
+  }
+  
+  nav span {
+    flex: 1 1 auto;
+  }
+  
+  nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #eee;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: 0.5rem;
+    width: 80px;
+    text-align: center;
+  }
+  
+  a:hover {
+    color: #000;
+    background-color: #ff7;
+  }
+  

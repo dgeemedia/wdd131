@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/javascriptarray.css">
+    <script src="scripts/javascriptarray.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array</title>
+</head>
+<body>
+    <main>
+        <h1>JavaScript Array Methods</h1>
+        <nav>
+          <span><a href="#map">map()</a></span>
+          <span><a href="#filter">filter()</a></span>
+          <span><a href="#reduce">reduce()</a></span>
+          <span><a href="#forEach">forEach()</a></span>
+          <span><a href="#find">find()</a></span>
+          <span><a href="#indexOf">indexOf()</a></span>
+        </nav>
+        <div class="output">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods" target="_blank">MDN Instance Methods</a>
+        </div>
+        <hr>
+        <section>
+          <h2 id="map">map()</h2>
+          <p>Returns a new array based upon a function. Each item of the source array is processed.</p>
+          <p><strong>General form for the map() method</strong></p>
+          <code>let newArray = originalArray.map(callbackFn, [thisArgument])</code>
+          <h3>Example</h3>
+          <p>Given the following array of numbers:
+            <code class="given">const numbers = [1,2,3,4];</code>
+          </p>
+          <p>❔ Create a new array that contains each of the <strong>numbers</strong> array values at double the value.</p>
+          <h4>Solution</h4>
+          <code class="solution">let doubleNumbers = numbers.map(number => number * 2);</code>
+          <h4>Result</h4>
+          <table>
+            <tr>
+              <td>doubleNumbers</td>
+              <td>[2,4,6,8]</td>
+            </tr>
+          </table>
+      
+          <h3>Exercise 1️⃣</h3>
+          <p>Using map(), process the given <strong>courses</strong> array to display just the course subjects (CSE, WDD) as list items <strong>&lt;li&gt;</strong> in the unordered list with an <strong>id</strong> of <strong>subjects</strong>.</p>
+          <div class="output">
+            1️⃣ Subject List
+            <ul id="subjects"></ul>
+          </div>
+        </section>
+        <hr>
+        <section>
+          <h2 id="filter">filter()</h2>
+          <p>Returns a new array containing only the elements that past the given filter test. Each value of the original array is tested.</p>
+          <p><strong>General form for the .filter() method</strong></p>
+          <code>let newArray = originalArray.filter(callbackFn, [thisArgument])</code>
+          <h3>Example</h3>
+          <p>Given the following array of numbers:
+            <code class="given">const numbers = [1,2,3,4,5,6,7];</code>
+          </p>
+          <p>❔ Create a new array that contains all the even numbers from the <strong>numbers</strong> array.</p>
+          <h4>Solution</h4>
+          <code class="solution">let evens = numbers.filter(number => number % 2 === 0);</code>
+          <h4>Result</h4>
+          <table>
+            <tr>
+              <td>evens</td>
+              <td>[2,4,6]</td>
+            </tr>
+          </table>
+      
+          <h3>Exercise 2️⃣</h3>
+          <p>Using filter(), process the given <strong>countries</strong> array to display only those countries that start with the letter "U" as list items <strong>&lt;li&gt;</strong> in the unordered list with an <strong>id</strong> of <strong>u</strong>.</p>
+          <div class="output">
+            2️⃣ Filterd Countries List
+            <ul id="u"></ul>
+          </div>
+        </section>
+      
+        <hr>
+        <section>
+          <h2 id="reduce">reduce()</h2>
+          <p>Reduces an array by using auser-supplied "reducer". Each value of the original array is used and the reduction results a single value.</p>
+          <p><strong>General form for the .reducer() method</strong></p>
+          <code>let result = originalArray.reduce(callbackFn, [thisArgument])</code>
+          <h3>Example</h3>
+          <p>Given the following array of numbers:</p>
+          <p><code class="given">const numbers = [1,2,3,4,5,6,7];</code></p>
+          </p>
+          <p>❔ Given a base/initial value of 10, find the sum of all the values in the <strong>numbers</strong> array plus the base value.</p>
+          <p><code>const initialValue = 10;</code></p>
+          <h4>Solution</h4>
+          <code class="solution">const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);</code>
+          <h4>Result</h4>
+          <table>
+            <tr>
+              <td>sum</td>
+              <td>49</td>
+            </tr>
+          </table>
+      
+          <h3>Exercise 3️⃣</h3>
+          <p>An array of <strong>fruits</strong> objects each with a <strong>name</strong> and <strong>price</strong> is provided. Each fruit has a different price. Calculate the total cost of all the fruits using <strong>reduce()</strong> and display it in the <strong>&lt;div&gt;</strong> with an <strong>id</strong> of <strong>total</strong>.</p>
+          <div class="output">
+            3️⃣ Reduce to total fruit cost
+            <div id="total"></div>
+          </div>
+        </section>
+      
+        <hr>
+        <section>
+          <h2 id="forEach">forEach()</h2>
+          <p>Executes a provided function once for each array element. Unlike map(), it does not return a new array.</p>
+          <p><strong>General form for the forEach() method</strong></p>
+          <code>originalArray.forEach(callbackFn, [thisArgument])</code>
+          <h3>Example</h3>
+          <p>Given the following array of colors:
+            <code class="given">const colors = ["red", "blue", "green", "yellow"];</code>
+          </p>
+          <p>❔ Log each color from the <strong>colors</strong> array to the console.</p>
+          <h4>Solution</h4>
+          <code class="solution">colors.forEach(color => console.log(color));</code>
+          <h4>Result</h4>
+          <p>Each color is printed in the console.</p>
+      
+          <h3>Exercise 4️⃣</h3>
+          <p>Using forEach(), iterate over the given <strong>students</strong> array and display each student's name as a list item <strong>&lt;li&gt;</strong> inside the unordered list with an <strong>id</strong> of <strong>studentList</strong>.</p>
+          <div class="output">
+            4️⃣ Student List
+            <ul id="studentList"></ul>
+          </div>
+        </section>
+      
+        <hr>
+        <section>
+          <h2 id="find">find()</h2>
+          <p>Returns the first element in an array that satisfies the provided testing function. If no values match, it returns undefined.</p>
+          <p><strong>General form for the find() method</strong></p>
+          <code>let foundItem = originalArray.find(callbackFn, [thisArgument])</code>
+          <h3>Example</h3>
+          <p>Given the following array of numbers:
+            <code class="given">const numbers = [10, 25, 40, 55, 70];</code>
+          </p>
+          <p>❔ Find the first number in the <strong>numbers</strong> array that is greater than 30.</p>
+          <h4>Solution</h4>
+          <code class="solution">let firstLargeNumber = numbers.find(num => num > 30);</code>
+          <h4>Result</h4>
+          <table>
+            <tr>
+              <td>firstLargeNumber</td>
+              <td>40</td>
+            </tr>
+          </table>
+      
+          <h3>Exercise 5️⃣</h3>
+          <p>Using <strong>find()</strong>, retrieve the first product from the given <strong>products</strong> array where the price is greater than 20, and display its name inside the <strong>&lt;p&gt;</strong> with an <strong>id</strong> of <strong>product</strong>.</p>
+          <div class="output">
+            5️⃣ 1st Product Price > 20
+            <p id="product"></p>
+          </div>
+        </section>
+      
+        <hr>
+        <section>
+          <h2 id="indexOf">indexOf()</h2>
+          <p>Returns the index (location) of the first occurrence of a specified value in an array. If the value is not found, it returns -1. This makes it great for determining if something exists in the array or not.</p>
+          <p><strong>General form for the indexOf() method</strong></p>
+          <code>let index = originalArray.indexOf(searchElement, [fromIndex])</code>
+          <h3>Example</h3>
+          <p>Given the following array of names:
+            <code class="given">const names = ["Alice", "Bob", "Charlie", "David"];</code>
+          </p>
+          <p>❔ Find the index of "Charlie" in the <strong>names</strong> array.</p>
+          <h4>Solution</h4>
+          <code class="solution">let charlieIndex = names.indexOf("Charlie");</code>
+          <h4>Result</h4>
+          <table>
+            <tr>
+              <td>charlieIndex</td>
+              <td>2</td>
+            </tr>
+          </table>
+      
+          <h3>Exercise 6️⃣</h3>
+          <p>Using indexOf(), find the position of "Morocco" in the given <strong>countries</strong> array and display the index inside the <strong>&lt;span&gt;</strong> with an <strong>id</strong> of <strong>bananaIndex</strong>. If no.</p>
+          <div class="output">
+            6️⃣ Morocco Index
+            <p id="output"></p>
+          </div>
+        </section>
+      </main>
+</body>
+</html>
