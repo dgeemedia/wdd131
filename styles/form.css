@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f2ff;
+    padding: 2rem;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #022142;
+  }
+  
+  label, legend {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  legend {
+    color: #022142;
+  }
+  
+  .mpm label[for="product"],
+  .mpm label[for="date"],
+  .mpm label[for="review"],
+  .mpm label[for="username"] {
+    color: #022142;
+  }
+
+  input[type="text"],
+  select,
+  textarea,
+  input[type="date"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+  
+  input[type="submit"] {
+    margin-top: 1.5rem;
+    background-color:#022142;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #F18F01;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #555;
+  }
+
+  .mpm textarea::placeholder {
+    font-size: 1rem;
+    color: #888;
+  }
+  

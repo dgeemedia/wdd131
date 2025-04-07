@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyPadiMan Service Review</title>
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+  <main>
+    <h1>Service Review</h1>
+    <form method="get" action="review.html" class="mpm">
+      <!-- Product/Service Name -->
+      <label for="product">Choose a Service:</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Service...</option>
+        <!-- Options will be populated by JavaScript -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating:</legend>
+        <label><input type="radio" name="rating" value="1" required />★</label>
+        <label><input type="radio" name="rating" value="2" />★★</label>
+        <label><input type="radio" name="rating" value="3" />★★★</label>
+        <label><input type="radio" name="rating" value="4" />★★★★</label>
+        <label><input type="radio" name="rating" value="5" />★★★★★</label>
+      </fieldset>
+
+      <!-- Date of Service -->
+      <label for="date">Date of Service:</label>
+      <input type="date" id="date" name="date" required />
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Which features did you find useful? <em>(Check all that apply)</em></legend>
+        <label><input type="checkbox" id="durability" name="features" value="Durability" /> Durability</label>
+        <label><input type="checkbox" id="ease" name="features" value="Ease of Use" /> Ease of Use</label>
+        <label><input type="checkbox" id="performance" name="features" value="Performance" /> Performance</label>
+        <label><input type="checkbox" id="design" name="features" value="Design" /> Design</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review">Written Review <small>(Optional)</small>:</label>
+      <textarea id="review" name="review" rows="4" placeholder="Write your review..."></textarea>
+
+      <!-- User Name -->
+      <label for="username">Your Name <small>(Optional)</small>:</label>
+      <input type="text" id="username" name="username" />
+
+      <!-- Submit -->
+      <input type="submit" value="Post Review" />
+    </form>
+  </main>
+
+  <footer>
+    <p>©<span id="currentyear"></span> 🌸 Lucky George Olumah 🌸 Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/form.js"></script>
+</body>
+</html>
