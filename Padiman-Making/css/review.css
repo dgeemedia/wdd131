@@ -1,8 +1,8 @@
 /* css/review.css */
 :root {
-    --primary-color: #022142;   /* Blue for accents */
-    --secondary-color: #F18F01; /* Green for highlights */
-    --bg-color: #ffffff;        /* White background */
+    --primary-color: #022142;  
+    --secondary-color: #F18F01; 
+    --bg-color: #ffffff;        
     --text-color: #333;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
