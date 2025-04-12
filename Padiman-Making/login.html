@@ -8,23 +8,6 @@
   <link rel="stylesheet" href="css/auth.css" />
 </head>
 <body class="auth-page">
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo.webp" alt="MyPadiMan Logo"></a>
-      </div>
-      <ul class="desktop-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button id="menu-button" aria-label="Menu">&#9776;</button>
-      <div id="nav-menu" class="mobile-nav">
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
   <div class="form-container">
     <h2>Welcome Back</h2>
     <form id="loginForm">
@@ -35,18 +18,10 @@
       </div>
       <button type="submit">Login</button>
     </form>
-    <p>Don't have an account? <a href="register.html">Register here</a></p>
+    <p>Don't have an account? <a href="register.html" class="highlight-link">Register here</a></p>
+    <p>Want to know more? <a href="index.html" class="highlight-link">Home</a></p>
+    <p>Get in-touch with us? <a href="contact.html" class="highlight-link">Contact Us</a></p>    
   </div>
   <script src="js/auth.js"></script>
-
-  <script>
-    const menuBtn = document.getElementById("menu-button");
-    const navMenu = document.getElementById("nav-menu");
-  
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
-    });
-  </script>
-  
 </body>
 </html>

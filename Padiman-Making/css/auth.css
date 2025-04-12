@@ -17,13 +17,18 @@
 }
 
 .form-container {
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 450px;
   background: var(--bg-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   text-align: center;
+}
+
+.form-container p {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .form-container input,
@@ -50,84 +55,25 @@
 }
 
 .form-container button:hover {
-  background: #004d66;
+  background: var(--secondary-color);
 }
 
 .hidden {
   display: none;
 }
 
-/* Basic Navbar Styles */
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-}
-
-.navbar .logo a {
-  font-size: 2%;
-  color: var(--bg-color);
+.highlight-link {
   font-weight: bold;
-  text-decoration: none;
-  font-family: var(--font-heading);
-}
-
-.navbar .logo img {
-  height: 100px;
-  display: block;
-  width: auto; /* preserves aspect ratio */
-}
-
-.desktop-nav {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.desktop-nav li a {
+  background-color: var(--primary-color);
+  padding: 4px 8px;
+  border-radius: 5px;
   text-decoration: none;
   color: var(--bg-color);
-  font-weight: 500;
-}
-
-/* Mobile nav button and menu */
-#menu-button {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
+  transition: background-color 0.3s ease;
   cursor: pointer;
 }
 
-#nav-menu {
-  display: none;
-  flex-direction: column;
-  background-color: var(--bg-color);
-  position: absolute;
-  top: 60px;
-  right: 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#nav-menu a {
-  padding: 10px;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 500;
-}
-
-#nav-menu.open {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  #menu-button {
-    display: block;
-  }
+.highlight-link:hover {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
 }
