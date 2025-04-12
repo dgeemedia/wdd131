@@ -1,0 +1,522 @@
+/* css/global.css */
+:root {
+  --primary-color: #022142;   /* Blue for accents */
+  --secondary-color: #F18F01; /* Green for highlights */
+  --bg-color: #ffffff;        /* White background */
+  --text-color: #333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: var(--bg-color);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Base nav styles */
+.desktop-nav ul,
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Desktop nav */
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.desktop-nav ul li a {
+  color: var(--bg-color);
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+.desktop-nav ul li a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Mobile Header (Logo + Hamburger) */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  position: relative;
+}
+
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.mobile-footer button {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.mobile-footer button {
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--bg-color);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+/* Mobile nav - hidden by default */
+#menu-button {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--bg-color);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background: var(--primary-color);
+  text-align: center;
+}
+
+nav a {
+  color: var(--bg-color);
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: var(--secondary-color);
+}
+
+/* Hide mobile nav by default */
+#nav-menu {
+  display: none;
+  position: absolute;
+  top: 60px;              /* below header */
+  right: 1rem;
+  background: var(--primary-color);
+  width: 180px;           /* adjust to taste */
+  border-radius: 6px;
+  overflow: hidden;
+  flex-direction: column; /* vertical stacking */
+  animation: slideDown 0.3s ease forwards;
+  z-index: 1000;
+}
+
+/* When open, show it */
+#nav-menu.open {
+  display: flex;
+}
+
+/* Mobile nav links */
+#nav-menu a {
+  padding: 12px 16px;
+  color: var(--bg-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#nav-menu a:last-child {
+  border-bottom: none;
+}
+
+#nav-menu a:hover {
+  background: var(--secondary-color);
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Only show the menu button on small screens */
+@media (min-width: 768px) {
+  #menu-button,
+  #nav-menu {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+/* Section Layout */
+.service-section {
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+  background: var(--bg-color);
+  text-align: center;
+}
+
+.section-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttons button:hover {
+  background-color: none;
+}
+
+/* Mobile Footer adjustments */
+.mobile-footer {
+  background: var(--primary-color);
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 8px 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.mobile-footer button {
+  color: var(--bg-color);
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-footer button i {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+/* Contact Form Styling */
+.contact {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.contact-form {
+  max-width: 600px;       
+  margin: 0 auto 3rem;    
+  padding: 2rem 1rem;    
+  background: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center; 
+}
+
+.contact-form h2 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+#contactForm button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* About Section Styling */
+.about {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* === Founder Profile Section === */
+.founder-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.founder-img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+}
+
+.founder-bio h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.founder-bio p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 768px) {
+  .founder-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .founder-img img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* === Job Career Section === */
+.job-career {
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+.job-career h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.job-career form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job-career input,
+.job-career textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.job-career input[type="file"] {
+  border: none;
+}
+
+.job-career button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.job-career button:hover {
+  background-color: var(--secondary-color);
+}
+
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary-color); 
+}

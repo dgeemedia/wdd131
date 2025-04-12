@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyPadiMan - Home</title>
+  <meta name="description" content="MyPadiMan Project" />
+  <meta name="author" content="Lucky George Olumah" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.webp" alt="MyPadiMan Logo" />
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button id="menu-button" aria-label="Menu">☰</button>
+    <nav id="nav-menu" class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a></li>
+        <a href="login.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="slider">
+      <img src="images/banner1.jpg" alt="Banner 1" class="slide active" loading="lazy" />
+      <img src="images/banner2.jpg" alt="Banner 2" class="slide" loading="lazy" />
+      <img src="images/banner3.jpg" alt="Banner 3" class="slide" loading="lazy" />
+    </div>
+    <div class="hero-text">
+      <h1>Your Trusted Partner for Errands & Services</h1>
+      <p>Post tasks, hire artisans, shop local, and pay securely.</p>
+    </div>
+  </section>
+
+  <!-- Main Content Sections -->
+  <main>
+    <!-- Link to Font Awesome (for icons) -->
+
+
+<main>
+  <!-- Errands & Artisans -->
+  <section class="service-section">
+    <h2>Errands & Artisans</h2>
+    <img src="images/errand.jpg" alt="Task Helper" class="section-image">
+    <p class="section-description">
+      Post errands like delivery, repairs, and tasks. Hire verified local artisans to get things done faster and better.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='login.html'"><i class="fas fa-plus-circle"></i> Post Task</button>
+      <button onclick="location.href='login.html'"><i class="fas fa-user-cog"></i> Hire Artisan</button>
+    </div>
+  </section>
+
+  <!-- Business Marketplace -->
+  <section class="service-section">
+    <h2>Business Marketplace</h2>
+    <img src="images/marketplace.jpg" alt="Shops" class="section-image">
+    <p class="section-description">
+      Discover nearby businesses, shop local products, and support small businesses in your community.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='login.html'"><i class="fas fa-store"></i> Browse Local Shops</button>
+    </div>
+  </section>
+
+  <!-- Wallet & Payments -->
+  <section class="service-section">
+    <h2>Wallet & Payments</h2>
+    <img src="images/wallet.jpg" alt="Wallet" class="section-image">
+    <p class="section-description">
+      Load funds to your MyPadiMan wallet, make secure payments, and track your transaction history.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='login.html'"><i class="fas fa-wallet"></i> Load Funds</button>
+      <button onclick="location.href='login.html'"><i class="fas fa-file-invoice-dollar"></i> View Transactions</button>
+    </div>
+  </section>
+
+  <!-- User Dashboard -->
+  <section class="service-section">
+    <h2>User Dashboard</h2>
+    <img src="images/dashboard.jpg" alt="Dashboard" class="section-image">
+    <p class="section-description">
+      Track your tasks, manage messages, edit your profile, and keep everything organized in your dashboard.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='login.html'"><i class="fas fa-clipboard-list"></i> My Orders</button>
+      <button onclick="location.href='login.html'"><i class="fas fa-comments"></i> Messages</button>
+      <button onclick="location.href='login.html'"><i class="fas fa-user"></i> Profile</button>
+    </div>
+  </section>
+</main>
+
+<!-- Mobile Bottom Navigation -->
+<footer class="mobile-footer">
+  <button onclick="location.href='index.html'"><i class="fas fa-home"></i><br>Home</button>
+  <button onclick="location.href='login.html'"><i class="fas fa-tasks"></i><br>Task</button>
+  <button onclick="location.href='login.html'"><i class="fas fa-store-alt"></i><br>Market</button>
+  <button onclick="location.href='login.html'"><i class="fas fa-wallet"></i><br>Wallet</button>
+</footer>
+
+  </main>
+
+  <!-- Mobile Bottom Navigation -->
+  <footer class="mobile-footer">
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='login.html'">Task</button>
+    <button onclick="location.href='login.html'">Market</button>
+    <button onclick="location.href='login.html'">Wallet</button>
+  </footer>
+
+  <!-- Desktop Footer -->
+  <footer class="desktop-footer">
+    <p>©<span id="currentyear"></span> 🌸 Lucky George Olumah 🌸 Nigeria</p>
+    <p id="lastModified"></p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/olumahbaba1" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/dgeemedia/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/lucky-george-olumah-58621870/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/dgeemedia/" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <a href="https://www.pexels.com/" target="_blank">References</a>
+    <a href="https://errand360.ng/" target="_blank">References</a>
+  
+  </footer>
+
+  <script src="js/slider.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

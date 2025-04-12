@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyPadiMan Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <img src="images/logo.webp" alt="MyPadiMan Logo"></a>
+      <h2>MyPadiMan</h2>
+      <nav>
+        <ul>
+          <li onclick="switchTab('userDashboard')" class="active"><i class="fa-solid fa-user"></i> User Dashboard</li>
+          <li id="logoutBtn">
+          <i class="fa-solid fa-sign-out-alt"></i> Logout</li>
+          <li onclick="switchTab('businessDashboard')"><i class="fa-solid fa-briefcase"></i> Business Dashboard</li>
+          <li onclick="switchTab('reviews')"><i class="fa-solid fa-star"></i> Reviews</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-main">
+      <!-- User Dashboard Section -->
+      <section id="userDashboard" class="dashboard-tab active">
+        <h2>Welcome, User</h2>
+        <div class="cards">
+          <div class="card">
+            <i class="fa-solid fa-tasks"></i>
+            <h3>My Tasks</h3>
+            <p>3 Active Tasks</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Wallet Balance</h3>
+            <p>₦10,200</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Messages</h3>
+            <p>2 New</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Business Dashboard Section -->
+      <section id="businessDashboard" class="dashboard-tab">
+        <h2>Welcome, Business Owner</h2>
+        <div class="cards">
+          <div class="card">
+            <i class="fa-solid fa-store"></i>
+            <h3>Products Listed</h3>
+            <p>12 Items</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>Orders</h3>
+            <p>5 Pending</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-coins"></i>
+            <h3>Total Sales</h3>
+            <p>₦150,000</p>
+          </div>
+        </div>
+      </section>
+
+      <!--Start of wallet-->
+      <section id="wallet-section">
+        <h2>My Wallet</h2>
+        <div class="wallet-card">
+          <p><strong>Balance:</strong> ₦<span id="wallet-balance">0.00</span></p>
+          <div class="wallet-actions">
+            <button onclick="loadFunds()">Load Funds</button>
+            <button onclick="makePayment()">Pay</button>
+            <button onclick="requestWithdraw()">Withdraw</button>
+          </div>
+        </div>
+        <div class="transaction-history">
+          <h3>Transaction History</h3>
+          <ul id="transaction-list">
+            <li>No transactions yet.</li>
+          </ul>
+        </div>
+      </section>
+      <!-- END: Wallet Section -->
+
+      <!-- Reviews Section -->
+      <section id="reviews" class="dashboard-tab">
+        <h2>Submit a Review</h2>
+        <form method="get" action="review.html" class="review-form">
+          <label for="product">Choose a Service:</label>
+          <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Service...</option>
+            <!-- JS will populate -->
+          </select>
+
+      <!-- Overall Rating -->
+        <fieldset>
+        <legend>Overall Rating:</legend>
+        <label><input type="radio" name="rating" value="1" required />★</label>
+        <label><input type="radio" name="rating" value="2" />★★</label>
+        <label><input type="radio" name="rating" value="3" />★★★</label>
+        <label><input type="radio" name="rating" value="4" />★★★★</label>
+        <label><input type="radio" name="rating" value="5" />★★★★★</label>
+        </fieldset>
+
+      <!-- Date of Service -->
+        <label for="date">Date of Service:</label>
+        <input type="date" id="date" name="date" required />
+
+      <!-- Useful Features -->
+        <fieldset>
+        <legend>Which features did you find useful? <em>(Check all that apply)</em></legend>
+        <label><input type="checkbox" id="durability" name="features" value="Durability" /> Durability</label>
+        <label><input type="checkbox" id="ease" name="features" value="Ease of Use" /> Ease of Use</label>
+        <label><input type="checkbox" id="performance" name="features" value="Performance" /> Performance</label>
+        <label><input type="checkbox" id="design" name="features" value="Design" /> Design</label>
+        </fieldset>
+
+      <!-- Written Review -->
+        <label for="review">Written Review <small>(Optional)</small>:</label>
+        <textarea id="review" name="review" rows="4" placeholder="Write your review..."></textarea>
+
+      <!-- User Name -->
+        <label for="username">Your Name <small>(Optional)</small>:</label>
+        <input type="text" id="username" name="username" />
+
+      <!-- Submit -->
+        <input type="submit" value="Post Review" />
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

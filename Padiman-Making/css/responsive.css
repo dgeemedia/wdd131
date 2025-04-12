@@ -1,0 +1,21 @@
+/* css/responsive.css */
+:root {
+  --primary-color: #022142;   /* Blue for accents */
+  --secondary-color: #F18F01; /* Green for highlights */
+  --bg-color: #ffffff;        /* White background */
+  --text-color: #333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+  header, footer {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+  }
+  .hero-text {
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+  }
+}

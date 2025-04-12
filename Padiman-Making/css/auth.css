@@ -1,0 +1,133 @@
+/* css/auth.css */
+:root {
+  --primary-color: #022142;   /* Blue for accents */
+  --secondary-color: #F18F01; /* Green for highlights */
+  --bg-color: #ffffff;        /* White background */
+  --text-color: #333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+.auth-page {
+  background: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 400px;
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  border: none;
+  color: var(--bg-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.form-container button:hover {
+  background: #004d66;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Basic Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+}
+
+.navbar .logo a {
+  font-size: 2%;
+  color: var(--bg-color);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: var(--font-heading);
+}
+
+.navbar .logo img {
+  height: 100px;
+  display: block;
+  width: auto; /* preserves aspect ratio */
+}
+
+.desktop-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.desktop-nav li a {
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: 500;
+}
+
+/* Mobile nav button and menu */
+#menu-button {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#nav-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+#nav-menu.open {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  #menu-button {
+    display: block;
+  }
+}

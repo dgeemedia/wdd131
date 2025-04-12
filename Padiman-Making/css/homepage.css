@@ -1,0 +1,118 @@
+/* css/homepage.css */
+:root {
+  --primary-color: #022142;   /* Blue for accents */
+  --secondary-color: #F18F01; /* Green for highlights */
+  --bg-color: #ffffff;        /* White background */
+  --text-color: #333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  height: 80vh;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  color: var(--bg-color);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.service-section {
+  padding: 2rem;
+  background: var(--bg-color);
+  margin: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service-section h2 {
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+}
+
+.service-section .buttons button {
+  margin: 0.5rem;
+  padding: 10px 20px;
+  border: none;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+
+.service-section .buttons button:hover {
+  background: var(--secondary-color);
+}
+
+/* Mobile bottom navigation */
+.mobile-footer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-nav.active {
+    display: block;
+  }
+  .mobile-footer {
+    display: flex;
+    justify-content: space-around;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}

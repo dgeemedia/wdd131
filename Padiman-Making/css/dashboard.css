@@ -1,0 +1,237 @@
+/* css/dashboard.css */
+:root {
+  --primary-color: #022142;   /* Blue for accents */
+  --secondary-color: #F18F01; /* Green for highlights */
+  --bg-color: #ffffff;        /* White background */
+  --text-color: #333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #f5f2ff;
+  color: var(--primary-color);
+}
+
+.dashboard {
+  padding: 2rem;
+}
+
+.dashboard h1 {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+}
+
+.dashboard p {
+  margin-bottom: 1rem;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  padding: 1rem;
+  width: 240px;
+  min-height: 100vh;
+}
+
+.sidebar img {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.sidebar h2 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: var(--font-heading);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+.dashboard-tab {
+  display: none;
+}
+
+.dashboard-tab.active {
+  display: block;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #f8f9fc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Wallet styles */
+#wallet-section {
+  background-color: var(--bg-color);
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+.wallet-card {
+  background: var(--bg-color);
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+.wallet-actions button {
+  margin-right: 10px;
+  padding: 8px 15px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wallet-actions button:hover {
+  background-color: var(--primary-color);
+}
+.transaction-history ul {
+  list-style: none;
+  padding-left: 0;
+}
+.transaction-history li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#reviews h2 {
+  text-align: center;
+  color: #022142;
+  margin-bottom: 1rem;
+}
+.review-form {
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.review-form label,
+.review-form legend {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #022142;
+}
+
+.review-form select,
+.review-form input[type="text"],
+.review-form input[type="date"],
+.review-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.review-form textarea {
+  resize: vertical;
+}
+
+.review-form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.review-form textarea::placeholder {
+  font-size: 1rem;
+  color: #888;
+}
+
+.review-form input[type="submit"] {
+  margin-top: 0.75rem;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  font-weight: bold;
+  border-radius: 8%;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+}
+
+.review-form input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}

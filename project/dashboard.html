@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyPadiMan - Dashboard</title>
+  <link rel="stylesheet" href="styles/mypadi.css" />
+</head>
+<body>
+  <!-- Reuse the same mobile header and sidebar -->
+  <header id="mobileHeader">
+    <div class="logo-container">
+      <img src="images/logo.webp" alt="MyPadiMan Logo" class="logo" loading="lazy" />
+      <span class="logo-text" id="logoText">MyPadiMan</span>
+    </div>
+    <button id="hamburgerBtn" class="hamburger">☰</button>
+  </header>
+
+  <nav id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html" id="dashboardLink">Dashboard</a></li>
+      <li><a href="errands.html">Errands/Artisans</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li id="authLink"><a href="#" id="logoutLink">Logout</a></li>
+    </ul>
+  </nav>
+  <div id="overlay"></div>
+
+  <main>
+    <section class="dashboard">
+      <h2>Dashboard</h2>
+      <div id="userInfo">
+        <!-- Dynamically populated with user's information -->
+      </div>
+      <section class="wallet">
+        <h2>Wallet Summary</h2>
+        <p>Your Balance: <span class="currency"></span><span id="balance">0.00</span></p>
+        <a href="wallet.html" class="btn">Manage Wallet</a>
+      </section>
+      <!-- Additional content: e.g., Recent Activity, Featured Reviews -->
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <p>Check out your latest errands and reviews.</p>
+        <!-- This could be further developed -->
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyPadiMan. <a href="reference.html">References</a></p>
+  </footer>
+
+  <script src="script/mypadi.js" defer></script>
+</body>
+</html>

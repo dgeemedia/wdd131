@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyPadiMan - Home</title>
+  <link rel="stylesheet" href="styles/mypadi.css" />
+</head>
+<body>
+  <!-- Mobile Header with Slide-In Sidebar -->
+  <header id="mobileHeader">
+    <div class="logo-container">
+      <img src="images/logo.webp" alt="MyPadiMan Logo" class="logo" loading="lazy" />
+      <span class="logo-text" id="logoText">MyPadiMan</span>
+    </div>
+    <!-- Hamburger Button toggles sidebar; text dynamically changes -->
+    <button id="hamburgerBtn" class="hamburger">☰</button>
+  </header>
+
+  <!-- Slide-in Sidebar Navigation -->
+  <nav id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!-- When logged in, Dashboard will be visible -->
+      <li><a href="dashboard.html" id="dashboardLink" style="display: none;">Dashboard</a></li>
+      <li><a href="errands.html">Errands/Artisans</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <!-- Conditionally display login/register or logout -->
+      <li id="authLink"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay for Sidebar -->
+  <div id="overlay"></div>
+
+  <!-- Hero Section with Slider and Dynamic Buttons -->
+  <section class="hero">
+    <div class="hero-slider">
+      <img src="images/hero1.jpg" class="slide active" alt="Community Image 1" loading="lazy" />
+      <img src="images/hero2.jpg" class="slide" alt="Community Image 2" loading="lazy" />
+      <img src="images/hero3.jpg" class="slide" alt="Community Image 3" loading="lazy" />
+    </div>
+    <div class="hero-content">
+      <h1>Welcome to MyPadiMan</h1>
+      <p>Your dynamic marketplace for errands, artisans, and local businesses.</p>
+      <div class="hero-buttons">
+        <!-- Dynamic Login/Register buttons will be created by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <img src="images/hero1.jpg" alt="Errands & Artisans" loading="lazy" />
+      <h2>Errands & Artisans</h2>
+      <p>Request tasks and hire skilled artisans near you.</p>
+      <!-- If not logged in, send to login. (It can be changed later if logged in.) -->
+      <a href="login.html" class="btn">Learn More</a>
+    </div>
+    <div class="feature">
+      <img src="images/hero2.jpg" alt="Business Marketplace" loading="lazy" />
+      <h2>Business Marketplace</h2>
+      <p>Shop from local businesses and enjoy secure payments.</p>
+      <a href="login.html" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyPadiMan. <a href="reference.html">References</a></p>
+  </footer>
+
+  <script src="script/mypadi.js" defer></script>
+</body>
+</html>

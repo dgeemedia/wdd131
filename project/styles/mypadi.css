@@ -1,0 +1,354 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header (Desktop & Mobile) */
+  header {
+    background: #022142;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 0.5rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a.active {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section with Slider */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+  }
+  
+  .hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  .hero-slider .slide.active {
+    opacity: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+  }
+  
+  .hero-buttons .btn {
+    margin: 0 10px;
+  }
+  
+  /* Features Section */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+  
+  .feature {
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1 1 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .feature img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  /* Buttons & Call-to-Action */
+  .btn {
+    display: inline-block;
+    background: #022142;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #F18F01;
+  }
+  
+  /* Registration Form Styles */
+  .register {
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .register h2 {
+    text-align: center;
+    color: #022142;
+  }
+  
+  .register form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .register input,
+  .register select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .register button {
+    background: #022142;
+    color: #fff;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register button:hover {
+    background: #F18F01;
+  }
+  
+  /* Forgot Password */
+  .forgot-password {
+    margin-top: 10px;
+  }
+  
+  .forgot-password a {
+    color: #F18F01;
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
+  /* New User Message */
+  .new-user {
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  /* Wallet Section */
+  #walletSection {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  #walletSection p {
+    font-size: 1.2rem;
+  }
+  
+  .currency {
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer {
+    background: #022142;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Mobile Header & Sidebar */
+  #mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container .logo {
+    height: 30px;
+  }
+  
+  .logo-text {
+    margin-left: 10px;
+    font-size: 18px;
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  #sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #022142;
+    padding-top: 60px;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+  
+  #sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #sidebar ul li {
+    padding: 15px 20px;
+  }
+  
+  #sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #sidebar ul li a:hover {
+    color: #ffc107;
+  }
+  
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 998;
+  }
+  
+  /* Contact Form Styles */
+  #contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contactForm label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #contactForm input,
+  #contactForm textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #contactForm button {
+    margin-top: 15px;
+    background: #022142;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #contactForm button:hover {
+    background: #F18F01;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+    .register, #walletSection, #contactForm {
+      width: 95%;
+    }
+  }
+  

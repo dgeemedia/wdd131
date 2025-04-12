@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyPadiMan - Login</title>
+  <link rel="stylesheet" href="styles/mypadi.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="images/logo.webp" alt="MyPadiMan Logo" loading="lazy" />
+      <span>MyPadiMan</span>
+    </div>
+    <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="errands.html">Errands/Artisans</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="reference.html">References</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section class="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginEmail">Email Address</label>
+        <input type="email" id="loginEmail" name="loginEmail" required />
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" required />
+          
+        <!-- Forgot Password Link -->
+        <div class="forgot-password">
+        <a href="forgot-password.html">Forgot Password?</a>
+        </div>
+        
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p class="new-user">
+        Not registered yet? <a href="register.html">Click here to register</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyPadiMan. <a href="reference.html">References</a></p>
+  </footer>
+
+  <script src="script/mypadi.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MyPadiMan Project" />
+  <meta name="author" content="Lucky George Olumah" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"rel="stylesheet"/>
+  <title>Contact & About - MyPadiMan</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.webp" alt="MyPadiMan Logo" />
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button id="menu-button" aria-label="Menu">☰</button>
+    <nav id="nav-menu" class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a></li>
+        <a href="login.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+<main>
+  <section class="about">
+    <h1>About MyPadiMan</h1>
+    <p>MyPadiMan is a dynamic marketplace for errands, artisans, and local businesses. We aim to connect individuals with trusted local services and provide a platform where artisans and businesses can thrive.</p>
+  </section>
+
+  <section class="founder-profile">
+    <div class="founder-img">
+      <img src="images/profile.jpg" alt="Lucky George Olumah">
+    </div>
+    <div class="founder-bio">
+      <h2>Lucky George Olumah</h2>
+      <p>I’m the Founder &amp; President of MyPadiMan, and a passionate software developer dedicated to helping people find meaningful employment. I hold a B.Sc. in Mathematics, am currently pursuing another degree in Software Development, and earned certificates in Entrepreneurial Management (Lagos Business School) and Project Management (University of California).</p>
+      <p>My passion for technology and creating job opportunities led me to build this platform—connecting service providers and job seekers across Nigeria.</p>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section class="job-career">
+    <h2>Looking for a Job?</h2>
+    <p>Submit your CV and we’ll connect you with opportunities available on the platform.</p>
+    <form id="cvForm" enctype="multipart/form-data">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="file" accept=".pdf,.doc,.docx" required>
+      <button type="submit">Submit CV</button>
+    </form>
+  </section>
+</main>
+
+<footer class="desktop-footer">
+  <p>©<span id="currentyear"></span> 🌸 Lucky George Olumah 🌸 Nigeria</p>
+  <p id="lastModified"></p>
+  <div class="social-icons">
+    <a href="https://web.facebook.com/olumahbaba1" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/dgeemedia/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/lucky-george-olumah-58621870/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/dgeemedia/" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+  <a href="https://www.pexels.com/" target="_blank">References</a>
+  <a href="https://errand360.ng/" target="_blank">References</a>
+
+</footer>
+
+<script src="js/menu.js"></script>
+</body>
+</html>

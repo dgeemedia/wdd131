@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyPadiMan - Registration</title>
+  <link rel="stylesheet" href="styles/mypadi.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="images/logo.webp" alt="MyPadiMan Logo" loading="lazy" />
+      <span>MyPadiMan</span>
+    </div>
+    <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="errands.html">Errands/Artisans</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="reference.html">References</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section class="register">
+      <h2>Create an Account</h2>
+      <form id="registrationForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your fullName for individual or Business Name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="country">Select Country</label>
+        <select id="country" name="country" required>
+          <option value="NG">Nigeria (₦)</option>
+          <option value="GH">Ghana (GH₵)</option>
+          <option value="US">USA ($)</option>
+          <option value="UK">UK (£)</option>
+        </select>
+
+        <label for="userType">Register as</label>
+        <select id="userType" name="userType" required>
+          <option value="">--Select User Type--</option>
+          <option value="individual">Individual (Runner/Customer)</option>
+          <option value="business">Business Owner</option>
+          <option value="artisan">Artisan</option>
+        </select>
+
+        <!-- Fields for Business Owners -->
+        <div id="businessFields" class="conditional-fields" style="display: none;">
+          <label for="businessCertificate">Business Certificate (Upload File)</label>
+          <input type="file" id="businessCertificate" name="businessCertificate" accept="image/*,application/pdf" />
+          
+          <label for="taxId">Tax Identification Number (TIN)</label>
+          <input type="text" id="taxId" name="taxId" />
+        </div>
+
+        <!-- Field for Artisans -->
+        <div id="artisanFields" class="conditional-fields" style="display: none;">
+          <label for="servicesOffered">Services Offered</label>
+          <input type="text" id="servicesOffered" name="servicesOffered" placeholder="e.g. plumbing, carpentry, tailoring" />
+        </div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyPadiMan. <a href="reference.html">References</a></p>
+  </footer>
+
+  <script src="script/mypadi.js" defer></script>
+</body>
+</html>
