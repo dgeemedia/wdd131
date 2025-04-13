@@ -2,48 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register - MyPadiMan</title>
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
 </head>
 <body class="auth-page">
   <div class="form-container">
-    <h2>Create Your Account</h2>
+    <h2>Create Account</h2>
     <form id="registrationForm">
-      <input type="text" name="name" id="name" placeholder="Full Name" required />
-      <input type="email" name="email" id="email" placeholder="Email Address" required />
-      <input type="password" name="password" id="password" placeholder="Password" required />
-      <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
-      <input type="text" name="country" id="country" placeholder="Country" required />
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      
+      <select id="country" required>
+        <option value="">Select Country</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Ghana">Ghana</option>
+        <option value="Kenya">Kenya</option>
+        <option value="South Africa">South Africa</option>
+        <!-- Add more as needed -->
+      </select>
 
-      <label for="userType">Select Role:</label>
-      <select id="userType" name="userType">
-        <option value="individual">Individual/Runner</option>
-        <option value="artisan">Artisan</option>
+      <select id="userType" required>
+        <option value="">Select Account Type</option>
+        <option value="individual">Individual / Runner / Artisan</option>
         <option value="business">Business Owner</option>
       </select>
 
-      <!-- Artisan Extra Field -->
-      <div id="artisanFields" class="hidden">
-        <textarea name="servicesOffered" id="servicesOffered" placeholder="Describe the services you offer" required></textarea>
+        <!-- Services Offered for Artisan and Business -->
+        <div id="servicesField" class="hidden">
+        <label for="servicesOffered">Describe what you or your business does:</label>
+        <textarea id="servicesOffered" name="servicesOffered" placeholder="Describe your services or business offering..." required></textarea>
       </div>
 
-      <!-- Business Extra Fields -->
-      <div id="businessFields" class="hidden">
-        <input type="text" name="businessRegNumber" id="businessRegNumber" placeholder="Business Registration Number" required />
-        <input type="text" name="taxId" id="taxId" placeholder="Tax ID" required />
-        <input type="file" name="businessCertificate" id="businessCertificate" accept=".jpg, .jpeg, .png, .pdf" required />
-      </div>
+        <!-- Business Upload Section -->
+  <div id="businessFields" class="hidden">
+  <label for="businessCertificate">Upload CAC Certificate</label>
+  <small style="display:block; margin-bottom: 0.5rem; color: #666;">
+    Accepted formats: PDF, JPG, JPEG, or PNG
+  </small>
+  <input 
+    type="file" 
+    name="businessCertificate" 
+    id="businessCertificate" 
+    accept=".pdf, .jpg, .jpeg, .png"
+    placeholder="Upload CAC Certificate" 
+    required/>
+  </div>
 
       <button type="submit">Register</button>
     </form>
-
     <p>Already have an account? <a href="login.html" class="highlight-link">Login here</a></p>
     <p>Want to know more? <a href="index.html" class="highlight-link">Home</a></p>
     <p>Get in-touch with us? <a href="contact.html" class="highlight-link">Contact Us</a></p>
   </div>
-
-  <script src="js/formHandler.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>

@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
+    console.log("Form Submitted");
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
