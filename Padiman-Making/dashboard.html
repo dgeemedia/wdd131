@@ -28,8 +28,8 @@
     <main class="dashboard-main">
       <!-- User Dashboard Section -->
       <section id="userDashboard" class="dashboard-tab active">
-        <h2>Welcome, User</h2>
-        <div class="cards">
+        <h2 id="welcome-message">Welcome, User</h2>
+          <div class="cards">
           <div class="card">
             <i class="fa-solid fa-tasks"></i>
             <h3>My Tasks</h3>
@@ -139,5 +139,25 @@
   </div>
 
   <script src="js/dashboard.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const userData = JSON.parse(localStorage.getItem("user"));
+      const name = userData?.name || "User";
+      const welcomeEl = document.getElementById("welcome-message");
+  
+      welcomeEl.textContent = `Welcome to your dashboard, ${name}!`;
+  
+      // Logout logic
+      const logoutBtn = document.getElementById("logoutBtn");
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+          localStorage.removeItem("user");
+          window.location.href = "login.html";
+        });
+      }
+    });
+  </script>
+  
 </body>
 </html>
